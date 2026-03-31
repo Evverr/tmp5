@@ -31,7 +31,7 @@ export default function App() {
       {/* Top Menu */}
       <div className="sticky top-0 bg-white shadow-md z-10">
         <div className="max-w-[1200px] mx-auto px-4 py-4">
-          <h1 className="text-center font-['Unbounded:Bold',sans-serif] text-xl text-[#00b2b7] mb-4">
+          <h1 className="text-center font-['Unbounded',sans-serif] text-xl text-[#00b2b7] mb-4">
             Невероятные спортивные приключения Кота-Мурчика
           </h1>
           
@@ -47,7 +47,7 @@ export default function App() {
                     : "bg-gray-100 text-[#2c2c2c] hover:bg-gray-200"
                 }`}
               >
-                <div className="font-['Unbounded:Medium',sans-serif] text-sm">
+                <div className="font-['Unbounded',sans-serif] text-sm">
                   {page.number}
                 </div>
                 <div className="text-xs opacity-80">{page.title}</div>
@@ -60,7 +60,7 @@ export default function App() {
             <button
               onClick={() => setCurrentPage(Math.max(1, currentPage - 1))}
               disabled={currentPage === 1}
-              className={`px-6 py-2 rounded-lg font-['Unbounded:Medium',sans-serif] ${
+              className={`px-6 py-2 rounded-lg font-['Unbounded',sans-serif] ${
                 currentPage === 1
                   ? "bg-gray-200 text-gray-400 cursor-not-allowed"
                   : "bg-[#00b2b7] text-white hover:bg-[#009499]"
@@ -68,13 +68,13 @@ export default function App() {
             >
               ← Назад
             </button>
-            <span className="font-['Unbounded:Regular',sans-serif] text-sm text-[#2c2c2c]">
+            <span className="font-['Manrope',sans-serif] text-sm text-[#2c2c2c]">
               Страница {currentPage} из {pages.length}
             </span>
             <button
               onClick={() => setCurrentPage(Math.min(pages.length, currentPage + 1))}
               disabled={currentPage === pages.length}
-              className={`px-6 py-2 rounded-lg font-['Unbounded:Medium',sans-serif] ${
+              className={`px-6 py-2 rounded-lg font-['Unbounded',sans-serif] ${
                 currentPage === pages.length
                   ? "bg-gray-200 text-gray-400 cursor-not-allowed"
                   : "bg-[#00b2b7] text-white hover:bg-[#009499]"
