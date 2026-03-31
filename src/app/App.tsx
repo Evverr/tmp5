@@ -41,7 +41,7 @@ export default function App() {
               <button
                 key={page.number}
                 onClick={() => setCurrentPage(page.number)}
-                className={`px-4 py-2 rounded-lg transition-all ${
+                className={`w-20 sm:w-24 py-2 rounded-lg transition-all ${
                   currentPage === page.number
                     ? "bg-[#00b2b7] text-white shadow-lg"
                     : "bg-gray-100 text-[#2c2c2c] hover:bg-gray-200"
@@ -53,35 +53,6 @@ export default function App() {
                 <div className="text-xs opacity-80">{page.title}</div>
               </button>
             ))}
-          </div>
-
-          {/* Navigation Arrows */}
-          <div className="flex justify-between items-center mt-4 max-w-[595px] mx-auto">
-            <button
-              onClick={() => setCurrentPage(Math.max(1, currentPage - 1))}
-              disabled={currentPage === 1}
-              className={`px-6 py-2 rounded-lg font-['Unbounded',sans-serif] ${
-                currentPage === 1
-                  ? "bg-gray-200 text-gray-400 cursor-not-allowed"
-                  : "bg-[#00b2b7] text-white hover:bg-[#009499]"
-              }`}
-            >
-              ← Назад
-            </button>
-            <span className="font-['Manrope',sans-serif] text-sm text-[#2c2c2c]">
-              Страница {currentPage} из {pages.length}
-            </span>
-            <button
-              onClick={() => setCurrentPage(Math.min(pages.length, currentPage + 1))}
-              disabled={currentPage === pages.length}
-              className={`px-6 py-2 rounded-lg font-['Unbounded',sans-serif] ${
-                currentPage === pages.length
-                  ? "bg-gray-200 text-gray-400 cursor-not-allowed"
-                  : "bg-[#00b2b7] text-white hover:bg-[#009499]"
-              }`}
-            >
-              Вперед →
-            </button>
           </div>
         </div>
       </div>
